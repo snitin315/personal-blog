@@ -6,6 +6,17 @@ const { paginate } = require(`gatsby-awesome-pagination`)
  * Here is the place where Gatsby creates the URLs for all the
  * posts, tags, pages and authors that we fetched from the Ghost site.
  */
+
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  const typeDefs = `
+    type GhostPost implements Node {
+      primary_author: Object
+    }
+  `
+  createTypes(typeDefs)
+}
+
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
 
