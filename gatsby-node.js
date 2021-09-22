@@ -11,7 +11,7 @@ exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
     type GhostPost implements Node {
-      primary_author: Object
+      primary_author: GhostAuthor
     }
   `
   createTypes(typeDefs)
