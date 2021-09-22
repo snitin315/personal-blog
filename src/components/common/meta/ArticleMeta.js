@@ -123,7 +123,7 @@ ArticleMetaGhost.propTypes = {
         updated_at: PropTypes.string.isRequired,
         meta_title: PropTypes.string,
         meta_description: PropTypes.string,
-        primary_author: PropTypes.object.isRequired,
+        primary_author: PropTypes.object,
         feature_image: PropTypes.string,
         tags: PropTypes.arrayOf(
             PropTypes.shape({
